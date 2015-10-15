@@ -50,7 +50,7 @@ def main():
     tic.setParameter("ADCO", "M09-3390-V16")
     print(tic.dumps())
 
-    dg = McastDatagram("192.168.1.255", 4242)
+    dg = McastDatagram("127.0.0.1", 4242)
     dg.loadData(tic.dumps())
     dg.send()
 
