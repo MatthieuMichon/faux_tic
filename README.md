@@ -30,7 +30,7 @@ Tele information client
 
 ### Format
 
-Datagrams are encoded in a humain readible markup.
+Datagrams are encoded in a human readable markup.
 
 JSON output with extra comments:
 ```javascript
@@ -62,3 +62,13 @@ YAML: maybe better suited for single-board MCUs ?
   - MOTDETAT: 0x41FF01 # example
 }
 ```
+
+## Implementation
+
+The implementation is intended to be a simple as practical. It relies on the following systems:
+
+* A MCU board with network connectivity
+* A computer executing two server instances:
+** a software program receiving and processing data coming from the MCU
+** a HTTP server delivering HTML pages containing the previous processed data
+
